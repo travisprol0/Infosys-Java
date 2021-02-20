@@ -15,9 +15,7 @@ public class String3 {
             }
             reverseString = reverseString + reverseWord + " ";
         }
-        return reverseString.substring(0, reverseString.length()-1);
-
-        // return finalString;
+        return reverseString.substring(0, reverseString.length() - 1);
     }
 
     public static void main(String args[]) {
