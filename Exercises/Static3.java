@@ -12,7 +12,7 @@ class Booking{
         this.customerEmail = customerEmail;
         this.seatsRequired = seatsRequired;
         
-        if(seatsRequired < Booking.seatsAvailable){
+        if(seatsRequired <= Booking.seatsAvailable){
             this.setBooked(true);
             Booking.setSeatsAvailable(Booking.seatsAvailable - seatsRequired);
         } else {
