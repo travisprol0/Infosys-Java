@@ -4,13 +4,13 @@ public class String2 {
 
     public static boolean checkPalindrome(String str) {
         String reversedString = "";
-        for (int i = str.length() - 1; i >= 0; i--) {
+
+        for(int i = str.length()-1; i >= 0; i--){
             reversedString += str.charAt(i);
         }
-        if (str.equals(reversedString)) {
+        if (reversedString.equals(str)){
             return true;
         } else {
-
             return false;
         }
 

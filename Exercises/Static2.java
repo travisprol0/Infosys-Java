@@ -1,5 +1,3 @@
-package Exercises;
-
 class Participant {
     private static int counter;
     private String registrationId;
@@ -21,12 +19,12 @@ class Participant {
         registrationId = "D" + Participant.counter++;
         return registrationId;
     }
-    public int getCounter(){
+    public static int getCounter(){
         return counter;
     }
     
-    public void setCounter(int counter){
-        this.counter = counter;
+    public static void setCounter(int counter){
+        Participant.counter = counter;
     }
     
     public String getName(){
@@ -49,7 +47,7 @@ class Participant {
         return city;
     }
     
-    public void setSity(String city){
+    public void setCity(String city){
         this.city = city;
     }
 }
@@ -60,11 +58,12 @@ class Tester {
 		
 		Participant participant1 = new Participant("Franklin", 7656784323L, "Texas");
 		Participant participant2 = new Participant("Merina", 7890423112L, "New York");
-		Participant participant3 = new Participant("Travis", 8622738078L, "Pompton Plains");
+		Participant participant3 = new Participant("Jeena", 6789545678L, "California");
+		Participant participant4 = new Participant("Tom", 7878656545L, "New York");
 		
 		//Create more objects and add them to the participants array for testing your code
 		
-		Participant[] participants = { participant1, participant2, participant3 };
+		Participant[] participants = { participant1, participant2 };
 		
 		for (Participant participant : participants) {
 			System.out.println("Hi "+participant.getName()+"! Your registration id is "+participant.getRegistrationId());
