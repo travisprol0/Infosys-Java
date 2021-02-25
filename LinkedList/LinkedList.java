@@ -2,4 +2,4 @@
 
 List<String> myLIst = new LinkedList<String>();
 
-LinkedList<String> myList = new LInkedList<String>();
+LinkedList<String> myList = new LinkedList<String>();
