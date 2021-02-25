@@ -35,16 +35,12 @@ abstract class Payment{
 }
 
 class DebitCardPayment extends Payment{
-    private static int counter;
+    private static int counter = 1000;
     private double discountPercentage;
-    
-    static {
-        counter = 1000;
-    }
     
     public DebitCardPayment(int customerId){
         super(customerId);
-        String paymentId = "D" + counter++;
+        String paymentId = "D" + ++counter;
         super.setPaymentId(paymentId);
     }
     
@@ -67,21 +63,47 @@ class DebitCardPayment extends Payment{
     public double payBill(double amount){
         if(amount<=500){
             super.setServiceTaxPercentage(1.03);
-            setDiscountPercentage(.99);
+            setDiscountPercentage(1.01);
         }
         if(amount <=1000){
             super.setServiceTaxPercentage(1.05);
-            setDiscountPercentage(.98);
+            setDiscountPercentage(1.02);
         }else if(amount > 1000){
             super.setServiceTaxPercentage(1.06);
-            setDiscountPercentage(.97);
+            setDiscountPercentage(1.03);
         }
-        return amount * super.getServiceTaxPercentage() * getDiscountPercentage();
+        return amount * super.getServiceTaxPercentage() / getDiscountPercentage();
     }
 }
 
-class CreditCardPayment{
-    //Implement your code here
+class CreditCardPayment extends Payment{
+    private static int counter = 1000;
+    
+    public CreditCardPayment(int customerId){
+        super(customerId);
+        String paymentId = "C" + ++counter;
+        super.setPaymentId(paymentId);
+    }
+    
+    public static int getCounter(){
+        return counter;
+    }
+    
+    public static void setCounter(int counter){
+        CreditCardPayment.counter = counter;
+    }
+    
+    public double payBill(double amount){
+        if(amount<=500){
+            super.setServiceTaxPercentage(1.03);
+        } else if(amount <=1000){
+            super.setServiceTaxPercentage(1.05);
+        }else if(amount > 1000){
+            super.setServiceTaxPercentage(1.06);
+        }
+        return amount * super.getServiceTaxPercentage();
+    }
+
 }
 
 class Tester{
