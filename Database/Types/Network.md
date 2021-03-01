@@ -1,0 +1,1 @@
+Network Databases organize data into a graph structure in which object types are nodes and relationship types are arcs. Each record can have multiple parent and child records. Some examples of Network Databases are Integrated Database Management System (IDMS), Integrated Data Store (IDS) etc.

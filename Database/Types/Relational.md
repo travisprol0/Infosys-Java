@@ -1,0 +1,1 @@
+Relational Databases organizes data into one or more tables. A table consists of attributes (columns), tuples (rows) and provides a way to uniquely identify each tuple. Tables are related to each other through parent child relationships. Some examples of Relational Databases are DB2, Oracle, SQL Server etc.

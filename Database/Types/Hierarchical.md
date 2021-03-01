@@ -1,0 +1,1 @@
+Hierarchical Databases organize data into a tree-like structure. Data is stored as records which are connected to one another through parent child relationships. Some examples of Hierarchical Databases are Information Management System (IMS), Raima Database Manager (RDM) Mobile etc.
