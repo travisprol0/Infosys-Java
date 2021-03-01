@@ -13,7 +13,7 @@ Here, K stands for the key type and V stands for the value type which can be any
 The HashMap class implements the Map interface and can also be used to store key value pairs.
 
 */ 
-
+ 
 HashMap<String, Integer> booksMap = new HashMap<String, Integer>();
 Map<String, Integer> booksMap = new HashMap<String, Integer>();
 
