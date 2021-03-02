@@ -1,0 +1,1 @@
+SELECT Prodid, Category, Discount from Product WHERE Category = 'Apparel' OR Category = 'Sports' ORDER BY Category, Discount
