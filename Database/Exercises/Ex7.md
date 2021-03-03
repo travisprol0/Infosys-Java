@@ -1,0 +1,1 @@
+SELECT Prodid, Pdesc, Category, Discount from Product WHERE Category = 'Apparel'

@@ -1,0 +1,1 @@
+ALTER TABLE Player ADD MatchesPlayed NUMBER ADD MatchesWon NUMBER;
